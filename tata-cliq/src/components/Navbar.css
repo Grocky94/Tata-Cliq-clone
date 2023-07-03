@@ -19,6 +19,7 @@
     margin: auto;
     /* border: 1px solid black; */
     display: flex;
+    background: transparent;
     justify-content: space-between;
 }
 
@@ -28,24 +29,28 @@
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
+    background: transparent;
 }
 
 #child-logo {
     height: 6vh;
     width: 40%;
     margin-left: 10%;
+    background: transparent;
     /* border: 1px solid black; */
 }
 
 #child-logo>img {
     height: 100%;
     width: 100%;
-    object-fit: fill
+    object-fit: fill;
+    background: transparent;
 }
 
 #rightSide {
     height: 15vh;
     width: 80%;
+    background: transparent;
     /* border: 1px solid black; */
 }
 
@@ -55,6 +60,7 @@
     background-color: #000000;
     /* border: 1px solid black; */
     display: flex;
+    background: transparent;
     align-items: center;
 }
 
@@ -63,13 +69,19 @@
     width: 45%;
     font-size: 0.8em;
     font-weight: 600;
+    background: transparent;
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
 }
 
+.upper-nav-list-addition-width>a {
+    background: transparent;
+}
+
 .addition-width>a {
     margin-left: 2%;
+    background: transparent;
 }
 
 .upper-nav-list {
@@ -81,6 +93,8 @@
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
+    background: transparent;
+
 }
 
 #upper-rightSide>div:last-child {
@@ -93,6 +107,7 @@
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
+    background: transparent;
 }
 
 .lower-nav-list {
@@ -101,9 +116,17 @@
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
+    background: transparent;
+
 }
-.lower-nav-list>p{
+
+.lower-nav-list>p {
     margin-left: 2%;
+    background: transparent;
+}
+
+.lower-nav-list>p>i {
+    background: transparent;
 }
 
 .lower-nav-list-addition-width {
@@ -111,6 +134,7 @@
     width: 65%;
     /* border: 1px solid black; */
     display: flex;
+    background: transparent;
     align-items: center;
 }
 
@@ -132,6 +156,7 @@
     margin-top: 15px;
     left: 4%;
     color: white;
+    background: transparent;
 }
 
 #search>input {
@@ -146,11 +171,17 @@
     background-color: #4a4a4a;
 
 }
-#below-rightSide>div:last-child>div{
-    height:100%;
-    width:50%;
+
+#below-rightSide>div:last-child>div {
+    height: 100%;
+    width: 50%;
     /* border:1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+}
+
+#below-rightSide>div:last-child>div>i {
+    background: transparent;
 }

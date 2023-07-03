@@ -1,15 +1,16 @@
-#footer{
+footer{
     /* position: fixed; */
-    /* bottom: 0; */
-    /* height:50vh; */
+    /* height:60vh; */
     width:100%;
     /* border:1px solid black; */
+    background-color:#ffff;
 }
 #align-footer-div{
     /* height:60vh; */
     width:80%;
     margin: auto;
     /* border:1px solid black; */
+    background-color: #ffff;
 }
 #footer-logo{
     height:20vh;
@@ -27,11 +28,14 @@
     width:100%;
     /* border:1px solid black; */
     display: flex;
+
 }
 .footer-list-child{
     height:100%;
     width:25%;
+    background-color: #ffff;
     /* border:1px solid black; */
+
 }
 .footer-list-child>p:nth-child(1){
     font-weight: 600;
@@ -41,6 +45,8 @@
 .footer-list-child>p{
     margin-top: 4%;
     font-size: 0.8em;
+    background-color: #ffff;
+
 }
 /* #special{
     height:100%;

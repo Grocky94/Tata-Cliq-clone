@@ -1,7 +1,7 @@
 import "./../../src/components/Footer.css"
 function Footer() {
     return (
-        <div id="footer">
+        <footer id="footer">
             <div id="align-footer-div">
                 <div id="footer-logo">
                     <img src="https://www.tatacliq.com/src/general/components/img/Frame22222.svg" />
@@ -46,7 +46,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 export default Footer
