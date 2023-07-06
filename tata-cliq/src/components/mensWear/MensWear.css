@@ -43,7 +43,7 @@
     height: 10vh;
     width: 5vw;
     border-radius: 50%;
-    background-color: rgb(134, 144, 130);
+    background-color: transparent;
     /* border:1px solid black; */
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
 }
 
 #left-side-circle-btn:hover {
-    background-color: grey;
+    background-color: #d8d8d8;
 }
 
 #right-slider-btn {
@@ -76,7 +76,7 @@
     height: 10vh;
     width: 5vw;
     border-radius: 50%;
-    background-color: rgb(134, 144, 130);
+    background-color: transparent;
     /* border:1px solid black; */
     display: flex;
     align-items: center;
@@ -86,6 +86,11 @@
 #right-side-circle-btn>i {
     font-size: 1.5em;
     background: transparent;
+}
+
+#right-side-circle-btn:hover {
+    background-color: #d8d8d8;
+    transition: 1000ms;
 }
 
 #quickLink {
@@ -104,6 +109,7 @@
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .quickLink-div-cards {
@@ -128,6 +134,11 @@
     width: 100%;
     object-fit: fill;
 }
+.quickLink-div-cards-imgeHolder>img:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: 500ms;
+}
 
 #bank-ban-div {
     height: 20vh;
@@ -135,13 +146,21 @@
     /* border: 1px solid black; */
     display: flex;
     align-items: center;
-    justify-content: space-around;
 
+}
+
+#bank-ban-div-align {
+    height: 90%;
+    width: 80%;
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .bank-ban-card {
     height: 60%;
-    width: 32%;
+    width: 42%;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgb(227, 225, 225);
@@ -151,7 +170,6 @@
     height: 100%;
     width: 100%;
 }
-
 .blockbust-div {
     height: 20vh;
     width: 100%;
@@ -159,134 +177,50 @@
     display: flex;
     align-items: center;
 }
-
 .blockbust-child-div {
     height: 15vh;
     width: 80%;
     margin: auto;
     /* border: 1px solid black; */
 }
-
 .blockbust-child-div>img {
     height: 100%;
     width: 100%;
 }
 
-.ondemand-product {
-    height: 60vh;
-    width: 100%;
-    /* border:1px solid black; */
-    display: flex;
-    align-items: center;
-
-}
-
-.ondemand-product-child {
+.medium-double-div-aligner {
     height: 100%;
     width: 80%;
     margin: auto;
-    /* border:1px solid black; */
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.ondemand-product-card {
-    height: 90%;
-    width: 24%;
-    /* border:1px solid black; */
+.medium-double-child-div {
+    height: 95%;
+    width: 47%;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.ondemand-product-card-imageHolder {
-    height: 90%;
-    width: 90%;
-    /* border:1px solid black; */
+.medium-double-imageHolder{
+    height:95%;
+    width:95%;
     border-radius: 10px;
+    /* border:1px solid black; */
     overflow: hidden;
 }
-
-.ondemand-product-card-imageHolder>img:hover {
-    transform: scale(1.1);
-    height: 98%;
-    width: 98%;
+.medium-double-imageHolder>img{
+    height:100%;
+    width:100%;
 }
+.medium-double-imageHolder:hover{
+    transform: scale(1.02);
+    transition: 500ms;
 
-.ondemand-product-card-imageHolder>img {
-    height: 100%;
-    width: 100%;
-
-}
-
-.deals-wheels-div {
-    height: 20vh;
-    width: 100%;
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-}
-
-.deals-wheels-div {
-    height: 15vh;
-    width: 80%;
-    margin: auto;
-    /* border: 1px solid black; */
-}
-
-.deals-wheels-div>img {
-    height: 100%;
-    width: 100%;
-}
-
-.offer-percent-div {
-    height: 60vh;
-    width: 100%;
-    border:1px solid black;
-    display: flex;
-    align-items: center;
-
-}
-
-.offer-percent-child {
-    height: 100%;
-    width: 75%;
-    margin: auto;
-    border:1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.offer-percent-card {
-    height: 55%;
-    width: 22%;
-    /* border:1px solid black; */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.offer-percent-card-imageHolder {
-    height: 98%;
-    width: 98%;
-    /* border:1px solid black; */
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.offer-percent-card-imageHolder>img:hover {
-    transform: scale(1.1);
-    height: 97%;
-    width: 97%;
-}
-
-.offer-percent-card-imageHolder>img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 .left-right-btn-div {
@@ -344,68 +278,3 @@
     background: transparent;
 }
 
-.large-image-banner-div {
-    height: 45vh;
-    width: 100%;
-    /* border: 1px solid black; */
-}
-
-.large-image-banner-div-aligning {
-    height: 100%;
-    width: 80%;
-    /* border: 1px solid black; */
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-
-.large-image-banner-div-imageHolder {
-    height: 97%;
-    width: 98%;
-    margin: auto;
-    /* border:1px solid black; */
-}
-
-.large-image-banner-div-imageHolder>img {
-    height: 100%;
-    width: 100%;
-}
-
-.medium-double-div {
-    height: 65vh;
-    width: 100%;
-    /* border: 1px solid black; */
-}
-
-.medium-double-div-aligner {
-    height: 100%;
-    width: 80%;
-    margin: auto;
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.medium-double-child-div {
-    height: 95%;
-    width: 47%;
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.medium-double-imageHolder{
-    height:95%;
-    width:95%;
-    border-radius: 10px;
-    /* border:1px solid black; */
-    overflow: hidden;
-}
-.medium-double-imageHolder>img{
-    height:100%;
-    width:100%;
-}
-.medium-double-imageHolder:hover{
-    transform: scale(1.1);
-}

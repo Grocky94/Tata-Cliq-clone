@@ -1,4 +1,4 @@
-import "../..//../src/components/home/Home.css"
+ import "../..//../src/components/home/Home.css"
 function Home() {
     return (
         <>

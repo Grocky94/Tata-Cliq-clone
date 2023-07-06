@@ -10,7 +10,7 @@
     width: 100%;
     color: white;
     background-color: #212121;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 #align-nav {
@@ -37,6 +37,7 @@
     width: 40%;
     margin-left: 10%;
     background: transparent;
+    cursor: pointer;
     /* border: 1px solid black; */
 }
 
@@ -129,6 +130,7 @@
     background: transparent;
 }
 
+
 .lower-nav-list-addition-width {
     height: 100%;
     width: 65%;
@@ -184,4 +186,29 @@
 
 #below-rightSide>div:last-child>div>i {
     background: transparent;
+}
+
+.category-dropdown {
+    /* height: 60vh; */
+    width: 15vw;
+    /* border: 1px solid black; */
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    /* display: none; */
+}
+
+.category-dropdown-cards {
+    height: 10vh;
+    width: 95%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.category-dropdown>div:last-child {
+    border-bottom: none;
 }
