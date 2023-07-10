@@ -3,9 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+}
+#MW{
     background-color: #ececec;
 }
-
 #advertise-div {
     height: 65vh;
     width: 100%;

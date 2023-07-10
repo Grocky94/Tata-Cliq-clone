@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#profile-screen {
+    /* height:100vh; */
+    width: 100%;
+    border: 1px solid #000;
+    padding: 10vh 0;
+}
+
+#profile-screen-align {
+    /* height:100vh; */
+    margin: auto;
+    width: 80%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-side {
+    /* height:100vh; */
+    width: 20%;
+    border: 1px solid #000;
+    padding-bottom: 5%;
+}
+
+#general-info {
+    /* height:100vh; */
+    width: 54%;
+    border: 1px solid #000;
+}
+
+#icon-email-id {
+    height: 100%;
+    width: 22%;
+    border: 1px solid #000;
+}
+
+#menu-side-title {
+    height: 8vh;
+    width: 85%;
+    margin: auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}
+
+.menu-side-nav-list {
+    height: 8vh;
+    width: 85%;
+    margin: auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.menu-side-nav-list-logo {
+    height: 50%;
+    width: 20%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-side-nav-list-logo>img {
+    height: 80%;
+    width: 80%;
+}
+
+.menu-side-nav-list-label {
+    height: 50%;
+    width: fit-content;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+#menu-side>div:last-child>div:nth-child(2) {
+    color: #ff496d;
+}
+
+#general-info-head {
+    height: 8vh;
+    width: 85%;
+    margin: auto;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.general-info-details {
+    width: 85%;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+.general-info-headers {
+    height: 5vh;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.general-info-headers>p:last-child {
+    color: #ff496d;
+}
+
+#general-info-form {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.general-info-form-fills {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #000;
+    justify-content: space-around;
+}
+.general-info-form-fills>span{
+    height:100%;
+    width: fit-content;
+    border: 1px solid #000;
+    padding: 0 2%;
+}
+.general-info-form-fills>input{
+    height:5vh;
+    width: 75%;
+border-radius: 5px;
+}

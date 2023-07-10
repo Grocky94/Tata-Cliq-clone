@@ -1,7 +1,7 @@
  import "../..//../src/components/home/Home.css"
 function Home() {
     return (
-        <>
+        <div id="frag-home">
             {/* adver banner */}
             <div id="advertise-div">
                 <div id='left-slider-btn'>
@@ -366,7 +366,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default Home

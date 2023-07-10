@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+
+}
+
+#frag-home {
     background-color: #ececec;
 }
 
@@ -141,7 +145,7 @@
 
 .bank-ban-card {
     height: 60%;
-    width: 32%;
+    width: 30%;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgb(227, 225, 225);
@@ -243,7 +247,7 @@
 .offer-percent-div {
     height: 60vh;
     width: 100%;
-    border:1px solid black;
+    /* border:1px solid black; */
     display: flex;
     align-items: center;
 
@@ -253,7 +257,7 @@
     height: 100%;
     width: 75%;
     margin: auto;
-    border:1px solid black;
+    /* border:1px solid black; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -395,17 +399,20 @@
     align-items: center;
     justify-content: center;
 }
-.medium-double-imageHolder{
-    height:95%;
-    width:95%;
+
+.medium-double-imageHolder {
+    height: 95%;
+    width: 95%;
     border-radius: 10px;
     /* border:1px solid black; */
     overflow: hidden;
 }
-.medium-double-imageHolder>img{
-    height:100%;
-    width:100%;
+
+.medium-double-imageHolder>img {
+    height: 100%;
+    width: 100%;
 }
-.medium-double-imageHolder:hover{
+
+.medium-double-imageHolder:hover {
     transform: scale(1.1);
 }

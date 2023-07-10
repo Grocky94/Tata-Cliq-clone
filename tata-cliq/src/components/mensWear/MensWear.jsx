@@ -1,8 +1,14 @@
 import "./../mensWear/MensWear.css"
+import {useNavigate} from 'react-router-dom'
 
 function MensWear() {
+    const giveNavigation = useNavigate();
+
+    function nav (){
+        giveNavigation('/multiProductsMens')
+    }
     return (
-        <>
+        <div id="MW">
             {/* adver banner */}
             < div id="advertise-div" >
                 <div id='left-slider-btn'>
@@ -21,7 +27,7 @@ function MensWear() {
             </div >
             <div id="quickLink">
                 <div id="quickLink-div-rows">
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg" /></div></div>
+                    <div className="quickLink-div-cards" onClick={nav}><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg" /></div></div>
                     <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042768414.jpg" /></div></div>
                     <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042833950.jpg" /></div></div>
                     <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042899486.jpg" /></div></div>
@@ -144,7 +150,7 @@ function MensWear() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
 
     )
 }

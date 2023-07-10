@@ -65,7 +65,7 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-            {dropDown && <div className="category-dropdown" onMouseEnter={FallDown} onMouseLeave={Fallup} style={{ backgroundColor: backGround, color: color ? "black" : "white" }}
+            {dropDown && <div className="category-dropdown" onMouseEnter={FallDown} onMouseLeave={Fallup} style={{ backgroundColor: backGround? "white" : "black", color: color ? "black" : "white" }}
             >
                 <div className="category-dropdown-cards">
                     <p>Women's Fashion</p>
