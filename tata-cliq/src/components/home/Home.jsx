@@ -1,7 +1,11 @@
- import "../..//../src/components/home/Home.css"
+import "../..//../src/components/home/Home.css"
+import Navbar from "../Navbar"
+import Footer from "../Footer"
+
 function Home() {
     return (
         <div id="frag-home">
+            <Navbar />
             {/* adver banner */}
             <div id="advertise-div">
                 <div id='left-slider-btn'>
@@ -192,12 +196,12 @@ function Home() {
                 <div className="medium-double-div-aligner">
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926359527454.jpg"/>
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926359527454.jpg" />
                         </div>
                     </div>
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926359658526.jpg"/>
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926359658526.jpg" />
                         </div>
                     </div>
                 </div>
@@ -284,12 +288,12 @@ function Home() {
                 <div className="medium-double-div-aligner">
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926361198622.jpg"/>
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926361198622.jpg" />
                         </div>
                     </div>
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926361329694.jpg"/>
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/46926361329694.jpg" />
                         </div>
                     </div>
                 </div>
@@ -354,7 +358,7 @@ function Home() {
                             <img src="https://assets.tatacliq.com/medias/sys_master/images/47321892421662.jpg" />
                         </div>
                     </div>
-                    <div className="ondemand-product-card">
+                     <div className="ondemand-product-card">
                         <div className="ondemand-product-card-imageHolder">
                             <img src="https://assets.tatacliq.com/medias/sys_master/images/47321892487198.jpg" />
                         </div>
@@ -365,7 +369,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
+            
             </div>
+            <Footer />
         </div>
     )
 }

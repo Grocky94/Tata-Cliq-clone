@@ -1,3 +1,169 @@
-{
-    
-}
+[
+    {
+        "id": "1",
+        "offer": "",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016373929_437Wx649H_202302042021191.jpeg",
+        "Name": "U.S.Polo Assn.",
+        "Description": "U.S. Polo Assn. Ivory Cotton Regular Fit Polo t-Shirt",
+        "Price": "1899",
+        "Rating": "2.3",
+        "count": "5",
+        "Limited": "Limited offer"
+    },
+    {
+        "id": "2",
+        "offer": "42% off",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106111.jpeg",
+        "Name": "Puma",
+        "Description": "Puma Ess+",
+        "Price": "1855",
+        "Rating": "4.3",
+        "count": "6",
+        "Limited": ""
+    },
+    {
+        "id": "3",
+        "offer": "55% off",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014765428_437Wx649H_202210061555121.jpeg",
+        "Name": "United Colors of Benetton",
+        "Description": "United Colors of Benetton Maroon Polo T-Shirt",
+        "Price": "1034",
+        "Rating": "3",
+        "count": "2",
+        "Limited": "Limited Stock!"
+    },
+    {
+        "id": "4",
+        "offer": "55% off",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015247442_437Wx649H_202211110452311.jpeg",
+        "Name": "Jack & Jones",
+        "Description": "Jask & Jones Navy Blue Cotton slim fit Polo T-Shirt",
+        "Price": "764",
+        "Rating": "4.6",
+        "count": "14",
+        "Limited": ""
+    },
+    {
+        "id": "5",
+        "offer": "55% off",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000014309997_437Wx649H_202209012128361.jpeg",
+        "Name": "United Colors of Benetton",
+        "Description": "United Colors of Benetton Blue lightly washed jeans",
+        "Price": "2299",
+        "Rating": "2.8",
+        "count": "5",
+        "Limited": "Limited Stock!"
+    },
+    {
+        "id": "6",
+        "offer": "",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014428153_437Wx649H_202209112250181.jpeg",
+        "Name": "U.S.Polo Assn.",
+        "Description": "U.S.Polo Assn. Dark Green Cotton Regular Fit Printed Polo T-shirt",
+        "Price": "1599",
+        "Rating": "3",
+        "count": "2",
+        "Limited": "Limited Stock!"
+    },
+    {
+        "id": "7",
+        "offer": "61% off",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016971613_437Wx649H_202304131203541.jpeg",
+        "Name": "Pepe Jeans",
+        "Description": "Pepe Jeans Black Tapered Fit Jeans",
+        "Price": "1499",
+        "Rating": "3.6",
+        "count": "10",
+        "Limited": ""
+    },
+    {
+        "id": "8",
+        "offer": "",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017999239_437Wx649H_202306171935211.jpeg",
+        "Name": "Red Chief",
+        "Description": "Red Cheif Blue Slim Fit Lightly Washed Jeans",
+        "Price": "2115",
+        "Rating": "",
+        "count": "",
+        "Limited": ""
+    },
+    {
+        "id": "9",
+        "offer": "50% off",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016710567_437Wx649H_202303020148201.jpeg",
+        "Name": "Jack & Jones",
+        "Description": "Jack & Jones Jet Black Slim Fit Shirt",
+        "Price": "1499",
+        "Rating": "4.4",
+        "count": "8",
+        "Limited": ""
+    },
+    {
+        "id": "10",
+        "offer": "78% off",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016362070_437Wx649H_202302040017141.jpeg",
+        "Name": "Red Tape",
+        "Description": "Red Tape White Regular Fit Graphic Print Cotton Crew T-Shirt",
+        "Price": "417",
+        "Rating": "4.5",
+        "count": "15",
+        "Limited": "price dropped by ₹ 152"
+    },
+    {
+        "id": "11",
+        "offer": "",
+        "new": "New",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017911985_437Wx649H_202306121421201.jpeg",
+        "Name": "ETA",
+        "Description": "ETA by Westside Printed Black Resort Fit Shirt",
+        "Price": "899",
+        "Rating": "",
+        "count": "",
+        "Limited": "Limited Stock!"
+    },
+    {
+        "id": "12",
+        "offer": "50% off",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016236811_437Wx649H_202301261320511.jpeg",
+        "Name": "Pepe Jeans",
+        "Description": "Pepe Jeans Green Cotton Regular Fit Colour block Polo T-Shirt",
+        "Price": "899",
+        "Rating": "3.9",
+        "count": "14",
+        "Limited": "Limited Stock!"
+    },
+    {
+        "id": "13",
+        "offer": "",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017339144_437Wx649H_202304222144321.jpeg",
+        "Name": "WES Casuals",
+        "Description": "WES Casuals by Westside Navy Floral-Printed Slim-Fit Shirt",
+        "Price": "1299",
+        "Rating": "5",
+        "count": "1",
+        "Limited": ""
+    },
+    {
+        "id": "14",
+        "offer": "",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016886805_437Wx649H_202303162355511.jpeg",
+        "Name": "ETA",
+        "Description": "ETA by Westside Grey Slim-Fit Pure Cotton Chinos",
+        "Price": "1499",
+        "Rating": "3.3",
+        "count": "9",
+        "Limited": ""
+    },
+    {
+        "id": "15",
+        "offer": "",
+        "new":"New",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000018027381_437Wx649H_202306211108201.jpeg",
+        "Name": "Nuon Men",
+        "Description": "Nuon - Mens by Westside Solid Dark Grey Rodeo Slim Fit Jeans",
+        "Price": "1499",
+        "Rating": "",
+        "count": "",
+        "Limited": ""
+    }
+]

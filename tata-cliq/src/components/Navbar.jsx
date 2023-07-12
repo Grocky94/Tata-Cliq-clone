@@ -7,12 +7,16 @@ function Navbar() {
     const [backGround, setBackGround] = useState(false);
     const [rotate, setRotate] = useState(false)
     const redirect = useNavigate()
+    const [dropDown2, setDropDown2] = useState(false);
 
     function FallDown() {
         setDropDown(true);
         setColor(true);
         setBackGround(true)
         setRotate(true)
+    }
+    function FallDown2() {
+        setDropDown2(true);
     }
 
     function Fallup() {
@@ -21,11 +25,20 @@ function Navbar() {
         setBackGround(false);
         setRotate(false);
     }
+    function Fallup2() {
+        setDropDown2(false);
+    }
     function ToNavigate() {
         redirect("/mensWear")
     }
     function BackHome() {
         redirect("/")
+    }
+    function Profile(){
+        redirect('/profile')
+    }
+    function Cart(){
+        redirect('/cart')
     }
 
     return (
@@ -43,7 +56,7 @@ function Navbar() {
                         <div className="upper-nav-list">Gift Card</div>
                         <div className="upper-nav-list">CliQ Care</div>
                         <div className="upper-nav-list">Track Order</div>
-                        <div className="upper-nav-list">Sign in/ SignUp</div>
+                        <div className="upper-nav-list" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>Sign in/ SignUp</div>
                     </div>
                     <div id="below-rightSide">
                         <div className="lower-nav-list" onMouseEnter={FallDown} onMouseLeave={Fallup}>
@@ -60,12 +73,12 @@ function Navbar() {
                         </div>
                         <div className="lower-nav-list">
                             <div><i class="fa-regular fa-heart"></i></div>
-                            <div><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div onClick={Cart}><i class="fa-solid fa-bag-shopping" ></i></div>
                         </div>
                     </div>
                 </div>
             </div>
-            {dropDown && <div className="category-dropdown" onMouseEnter={FallDown} onMouseLeave={Fallup} style={{ backgroundColor: backGround? "white" : "black", color: color ? "black" : "white" }}
+            {dropDown && <div className="category-dropdown" onMouseEnter={FallDown} onMouseLeave={Fallup} style={{ backgroundColor: backGround ? "white" : "black", color: color ? "black" : "white" }}
             >
                 <div className="category-dropdown-cards">
                     <p>Women's Fashion</p>
@@ -98,6 +111,50 @@ function Navbar() {
                 <div className="category-dropdown-cards">
                     <p>Accessories</p>
                     <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>}
+            {dropDown2 && <div id="profile-side" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>
+                <div className="profile-side-list" onClick={Profile}>
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/general/components/img/profile.png" />
+                    </div>
+                    <p>My Account</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/general/components/img/order-history.svg" />
+                    </div>
+                    <p>Order History</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/general/components/img/WL7.svg" />
+                    </div>
+                    <p>My Wishlist</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/account/components/img/alert.svg" />
+                    </div>
+                    <p>Alert & Coupon</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/account/components/img/giftCards.svg" />
+                    </div>
+                    <p>Gift Card</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/account/components/img/cliqCash.svg" />
+                    </div>
+                    <p>CliQ Cash</p>
+                </div>
+                <div className="profile-side-list">
+                    <div className="profile-side-list-img-hold">
+                        <img src="https://www.tatacliq.com/src/general/components/img/settingsblack.svg" />
+                    </div>
+                    <p>LogOut</p>
                 </div>
             </div>}
         </div>

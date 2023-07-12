@@ -1,18 +1,11 @@
-import Navbar from "../Navbar";
-import "./../mensWear/MensWear.css";
-import {useNavigate} from 'react-router-dom';
-import Footer from "../Footer";
+import Footer from "../Footer"
+import Navbar from "../Navbar"
+import "./WomensWear.css"
 
-function MensWear() {
-    const giveNavigation = useNavigate();
-
-    function nav (){
-        giveNavigation('/multiProductsMens')
-    }
+const WomensWear = () => {
     return (
-        <div id="MW">
-            <Navbar/>
-            {/* adver banner */}
+        <div id='WM'>
+            <Navbar />
             < div id="advertise-div" >
                 <div id='left-slider-btn'>
                     <div id="left-side-circle-btn">
@@ -25,46 +18,37 @@ function MensWear() {
                     </div>
                 </div>
                 <div id="inner-div-advertise">
-                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47513566183454.jpg" />
+                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47506177589278.jpg" />
                 </div>
             </div >
-            <div id="quickLink">
-                <div id="quickLink-div-rows">
-                    <div className="quickLink-div-cards" onClick={nav}><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042768414.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042833950.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042899486.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396042965022.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396043030558.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396043096094.jpg" /></div></div>
-                    <div className="quickLink-div-cards"><div className="quickLink-div-cards-imgeHolder"><img src="//assets.tatacliq.com/medias/sys_master/images/47396043161630.jpg" /></div></div>
-                </div>
-            </div>
-            <div id="bank-ban-div">
-                <div id="bank-ban-div-align">
-                    <div className="bank-ban-card">
-                        <img src="//assets.tatacliq.com/medias/sys_master/images/46762762436638.jpg" />
+            <div id="Women-bank-ban-div">
+                <div id="Women-bank-ban-div-align">
+                    <div className="Women-bank-ban-card">
+                        <img src="https://assets.tatacliq.com/medias/sys_master/images/47667008962590.jpg" />
                     </div>
-                    <div className="bank-ban-card">
-                        <img src="//assets.tatacliq.com/medias/sys_master/images/47596855787550.jpg" />
+                    <div className="Women-bank-ban-card">
+                        <img src="https://assets.tatacliq.com/medias/sys_master/images/47636191477790.jpg" />
+                    </div>
+                    <div className="Women-bank-ban-card">
+                        <img src="https://assets.tatacliq.com/medias/sys_master/images/47596855787550.jpg" />
                     </div>
                 </div>
             </div>
             <div className="blockbust-div">
                 <div className="blockbust-child-div">
-                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47396043882526.jpg" />
+                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47374511702046.jpg" />
                 </div>
             </div>
             <div className="medium-double-div">
                 <div className="medium-double-div-aligner">
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396043948062.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505279518.jpg" />
                         </div>
                     </div>
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044013598.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505345054.jpg" />
                         </div>
                     </div>
                 </div>
@@ -73,19 +57,19 @@ function MensWear() {
                 <div className="medium-double-div-aligner">
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044079134.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505410590.jpg" />
                         </div>
                     </div>
                     <div className="medium-double-child-div">
                         <div className="medium-double-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044144670.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505476126.jpg" />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="blockbust-div">
                 <div className="blockbust-child-div">
-                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044210206.jpg" />
+                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47374511767582.jpg" />
                 </div>
             </div>
             <div className="left-right-btn-div">
@@ -104,29 +88,29 @@ function MensWear() {
                 <div className="ondemand-product-child">
                     <div className="ondemand-product-card">
                         <div className="ondemand-product-card-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044275742.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505541662.jpg" />
                         </div>
                     </div>
                     <div className="ondemand-product-card">
                         <div className="ondemand-product-card-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044341278.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505607198.jpg" />
                         </div>
                     </div>
                     <div className="ondemand-product-card">
                         <div className="ondemand-product-card-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044406814.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47374505672734.jpg" />
                         </div>
                     </div>
                     <div className="ondemand-product-card">
                         <div className="ondemand-product-card-imageHolder">
-                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044472350.jpg" />
+                            <img src="https://assets.tatacliq.com/medias/sys_master/images/47709346725918.png" />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="blockbust-div">
                 <div className="blockbust-child-div">
-                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47396044865566.jpg" />
+                    <img src="https://assets.tatacliq.com/medias/sys_master/images/47396070948894.jpg" />
                 </div>
             </div>
             <div className="ondemand-product">
@@ -153,9 +137,8 @@ function MensWear() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
-
     )
 }
-export default MensWear
+export default WomensWear

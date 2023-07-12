@@ -1,22 +1,21 @@
 import Navbar from '../Navbar';
-import './..//multi-products/MultiProductsMens.css'
-import { useNavigate } from "react-router-dom"
-import productData from "./../../MensMultipleProduct.json"
+import '../multi-products/MultiProductsKids.css'
+// import { useNavigate } from "react-router-dom"
+import KidsData from "../../KidsMultiProduct.json"
 import Footer from "../Footer"
-const MultiProductsMens = () => {
+const MultiProductsKids = () => {
 
+    // const router = useNavigate();
 
-    const router = useNavigate();
-
-    function goTo() {
-        router('/SingleProduct');
-    }
+    // function goTo() {
+    //     router('/SingleProduct');
+    // }
     return (
         <div id="parent-MPM">
             <Navbar />
             <div id="page-title">
-                <p>Men's winter wear</p>
-                <p>111050 Products</p>
+                <p>Kids Infants Jeans Trousers</p>
+                <p>540 Products</p>
             </div>
             <div id="sort-div">
                 <div id="sort-div-align">
@@ -47,7 +46,7 @@ const MultiProductsMens = () => {
                                 </div>
                                 {/* already selected box  */}
                                 <div className="selected-box">
-                                    <p>Men's Clothing</p>
+                                    <p>Kids</p>
 
                                 </div>
                             </div>
@@ -56,23 +55,32 @@ const MultiProductsMens = () => {
                                     <p>Categories</p>
                                 </div>
                                 <div className="selected-box">
-                                    <p>Casual wear</p>
+                                    <p>Infants</p>
                                     <p>X</p>
                                 </div>
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Categories</p>
-                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <p>Product Type</p>
                                 </div>
-                                {/* circle check boxes  */}
+                                <div className="selected-box">
+                                    <p>Jeans & Trousers</p>
+                                    <p>X</p>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>SubCategory</p>
+                                    {/* <i class="fa-solid fa-ellipsis"></i>  */}
+                                </div>
+                                {/* circle check boxes */}
                                 <div className="checkbox-series">
-                                    <p><span></span>T-shirt & Polos</p><p>40785</p>
+                                    <p><span></span>Jeans</p><p>435</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Shirt</p><p>30883</p>
+                                    <p><span></span>Leggings</p><p>105</p>
                                 </div>
-                                <div className="checkbox-series">
+                                {/* <div className="checkbox-series">
                                     <p><span></span>Sweatshirts</p><p>7426</p>
                                 </div>
                                 <div className="checkbox-series">
@@ -95,47 +103,11 @@ const MultiProductsMens = () => {
                                 </div>
                                 <div className="checkbox-series">
                                     <p><span></span>Others</p><p>28</p>
-                                </div>
+    </div>*/}
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
                                     <p>Brand</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Size</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Type</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Colour</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Price</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>fit</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Discount</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -147,19 +119,49 @@ const MultiProductsMens = () => {
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Sleeve</p>
+                                    <p>Price</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Collar</p>
+                                    <p>Colour</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>type</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>Discount</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
                                     <p>Pattern</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>Size</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>With Blouse</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div className='left-side-div-series'>
+                                <div className='div-series-title'>
+                                    <p>Ocassion</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -185,14 +187,14 @@ const MultiProductsMens = () => {
                     </div>
                     <div id="right-side">
                         {/* first product  */}
-                        {productData.map((singleObject) => (<div className="product-cart">
+                        {KidsData.map((singleObject) => (<div className="product-cart">
                             <div className="product-image-holder">
                                 {singleObject.offer && (
                                     <div className="product-offer">
                                         {singleObject.offer}
                                     </div>
                                 )}{singleObject.new && (
-                                <div className='product-offer-purple'>{singleObject.new}</div>)}
+                                    <div className='product-offer-purple'>{singleObject.new}</div>)}
 
                                 <div className='heart-div'>
                                     <img src="https://www.tatacliq.com/src/general/components/img/WL1.svg" />
@@ -225,9 +227,11 @@ const MultiProductsMens = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
 
-        </div>)
+            <Footer />
+        </div >
+
+    )
 }
 
-export default MultiProductsMens
+export default MultiProductsKids

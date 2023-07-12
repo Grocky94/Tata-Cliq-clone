@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007903246_437Wx649H_202208051816531.jpeg",
+        "Name": "Emanuel Ungaro",
+        "Description": "Emanuel Ungaro FM Frt D'amour Purple Gardenia Eau de Parfum for Women-100ml",
+        "Price": "3750",
+        "Rating": "",
+        "count": "",
+        "Limited": "Limited stock!"
+    },
+    {
+        "id": "2",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007903252_437Wx649H_202208051813331.jpeg",
+        "Name": "Emanuel Ungaro",
+        "Description": "Emanuel Ungaro FL Frt D'amour Turquoise Eau de Toilette for Women-100ml",
+        "Price": "3750",
+        "Rating": "",
+        "count": "",
+        "Limited": "Limited stock!"
+    },
+    {
+        "id": "3",
+        "offer": "10% off",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007904706_437Wx649H_202206152348021.jpeg",
+        "Name": "Tommy Hilfiger",
+        "Description": "Tommy Hilfiger Tommy Now Eau de Toilette for Men - 100 ml",
+        "Price": "5220",
+        "Rating": "4.3",
+        "count": "53",
+        "Limited": ""
+    },
+    {
+        "id": "4",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007904993_437Wx649H_202207300057321.jpeg",
+        "Name": "Studiowest",
+        "Description": "Studiowest Citrus by westside Eau de parfum - 100ml",
+        "Price": "995",
+        "Rating": "3.1",
+        "count": "12",
+        "Limited": ""
+    },
+    {
+        "id": "5",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007905012_437Wx649H_202207300057241.jpeg",
+        "Name": "Studiowest",
+        "Description": "Studiowest Aqua by westside Eau de parfum - 100ml",
+        "Price": "995",
+        "Rating": "3.9",
+        "count": "21",
+        "Limited": ""
+    },
+    {
+        "id": "6",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007905019_437Wx649H_202207300123361.jpeg",
+        "Name": "Studiowest",
+        "Description": "Studiowest Pear by westside Eau de parfum - 100ml",
+        "Price": "995",
+        "Rating": "4",
+        "count": "12",
+        "Limited": ""
+    },
+    {
+        "id": "7",
+        "offer": "40% off",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007906645_437Wx649H_202206152334521.jpeg",
+        "Name": "JACQUES BOGART",
+        "Description": "JACQUES BOGART story Red Eau de Toilette for Men - 100 ml",
+        "Price": "2730",
+        "Rating": "3",
+        "count": "2",
+        "Limited": "Limited stock!"
+    },
+    {
+        "id": "8",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i8/437Wx649H/MP000000007907025_437Wx649H_202205180807591.jpeg",
+        "Name": "ANTONIO BANDERAS",
+        "Description": "ANTONIO BANDERAS Seduction Doses Blue Seduction Women Eau de Toilette for Women - 30 ml",
+        "Price": "795",
+        "Rating": "4.3",
+        "count": "12",
+        "Limited": ""
+    },
+    {
+        "id": "9",
+        "offer": "",
+        "new":"",
+        "image": "//img.tatacliq.com/images/i7/437Wx649H/MP000000007907046_437Wx649H_202010080712351.jpeg",
+        "Name": "ANTONIO BANDERAS",
+        "Description": "Antonio Banderas The Secret Eau de Toilette for Men - 100Ml",
+        "Price": "2400",
+        "Rating": "3.7",
+        "count": "3",
+        "Limited": ""
+    }
+]
