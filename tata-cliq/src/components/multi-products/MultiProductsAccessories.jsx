@@ -1,9 +1,9 @@
 import Navbar from '../Navbar';
-import '../../components/multi-products/MultiProductsHomeKitchen.css'
+import '../multi-products/MultiProductsAccessories.css'
 // import { useNavigate } from "react-router-dom"
-import HomeKitchenData from "../Data/HomeKitchenMultipleProduct.json"
+import AccessoriesData from "../Data/AccessoriesMultipleProduct.json"
 import Footer from "../Footer"
-const MultiProductsHomeKitchen = () => {
+const MultiProductsAccessories= () => {
 
     // const router = useNavigate();
 
@@ -14,8 +14,8 @@ const MultiProductsHomeKitchen = () => {
         <div id="parent-MPM">
             <Navbar />
             <div id="page-title">
-                <p>Dining</p>
-                <p>80 Products</p>
+                <p>Womens bags</p>
+                <p>34573 Products</p>
             </div>
             <div id="sort-div">
                 <div id="sort-div-align">
@@ -46,60 +46,51 @@ const MultiProductsHomeKitchen = () => {
                                 </div>
                                 {/* already selected box  */}
                                 <div className="selected-box">
-                                    <p>Home</p>
+                                    <p>Accessories</p>
 
                                 </div>
                             </div>
-                            <div className='left-side-div-series'>
+                            {/* <div className='left-side-div-series'>
                                 <div className='div-series-title'>
                                     <p>Categories</p>
                                 </div>
                                 <div className="selected-box">
-                                    <p>Furniture</p>
+                                    <p>Ethnic wear</p>
                                     <p>X</p>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Product Type</p>
-                                </div>
-                                <div className="selected-box">
-                                    <p>Dining</p>
-                                    <p>X</p>
-                                </div>
-                            </div>
-                            <div className='left-side-div-series'>
-                                <div className='div-series-title'>
-                                    <p>Subcategory</p>
-                                    {/* <i class="fa-solid fa-ellipsis"></i> */}
+                                    <p>Category</p>
+                                     <i class="fa-solid fa-ellipsis"></i> 
                                 </div>
                                 {/* circle check boxes */}
                                 <div className="checkbox-series">
-                                    <p><span></span>Coffee Table</p><p>1</p>
+                                    <p><span></span>Women Bags</p><p>15850</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Dining Table Set</p><p>13</p>
+                                    <p><span></span>Women's Fashion Esse</p><p>419</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Dining Chair</p><p>43</p>
+                                    <p><span></span>Women's Hair acc.</p><p>328</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Dining Table</p><p>11</p>
+                                    <p><span></span>Women Belts</p><p>1108</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Bar Furniture</p><p>12</p>
-                                </div>
-                                {/*<div className="checkbox-series">
-                                    <p><span></span>Jeans</p><p>10337</p>
+                                    <p><span></span>Mens bags</p><p>7902</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Trousers & Chinos</p><p>7241</p>
+                                    <p><span></span>Mens Fashion esse.</p><p>5122</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>shorts</p><p>4387</p>
+                                    <p><span></span>Mens Belts</p><p>1814</p>
                                 </div>
                                 <div className="checkbox-series">
-                                    <p><span></span>Blazers</p><p>331</p>
+                                    <p><span></span>Kids Accessories</p><p>131</p>
+                                </div>
+                                <div className="checkbox-series">
+                                    <p><span></span>Utility & Stationary</p><p>1573</p>
                                 </div>
                                 <div className="checkbox-series">
                                     <p><span></span>Others</p><p>28</p>
@@ -113,7 +104,7 @@ const MultiProductsHomeKitchen = () => {
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Fabric Family</p>
+                                    <p>Bag Type</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -143,19 +134,19 @@ const MultiProductsHomeKitchen = () => {
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Pattern</p>
+                                    <p>Bag Size</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Size</p>
+                                    <p>Material</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>With Blouse</p>
+                                    <p>Suitable For</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -167,7 +158,7 @@ const MultiProductsHomeKitchen = () => {
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Occasion</p>
+                                    <p>Pattern</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -179,7 +170,7 @@ const MultiProductsHomeKitchen = () => {
                             </div>
                             <div className='left-side-div-series'>
                                 <div className='div-series-title'>
-                                    <p>Availability</p>
+                                    <p>Strap Type</p>
                                     <i class="fa-solid fa-plus"></i>
                                 </div>
                             </div>
@@ -187,7 +178,7 @@ const MultiProductsHomeKitchen = () => {
                     </div>
                     <div id="right-side">
                         {/* first product  */}
-                        {HomeKitchenData.map((singleObject) => (<div className="product-cart">
+                        {AccessoriesData.map((singleObject) => (<div className="product-cart">
                             <div className="product-image-holder">
                                 {singleObject.offer && (
                                     <div className="product-offer">
@@ -234,4 +225,4 @@ const MultiProductsHomeKitchen = () => {
     )
 }
 
-export default MultiProductsHomeKitchen
+export default MultiProductsAccessories

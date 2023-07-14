@@ -1,7 +1,7 @@
 import Navbar from '../Navbar';
 import '../../components/multi-products/MultiProductsBeauty.css'
 // import { useNavigate } from "react-router-dom"
-import BeautyData from "../../BeautyMultipleProduct.json"
+import BeautyData from "../Data/BeautyMultipleProduct.json"
 import Footer from "../Footer"
 const MultiProductsBeauty = () => {
 
@@ -196,7 +196,7 @@ const MultiProductsBeauty = () => {
                     </div>
                     <div id="right-side">
                         {/* first product  */}
-                        {BeautyData.map((singleObject) => (<div className="product-cart">
+                        {BeautyData.map((singleObject) => (<div id='beauty-product-cart'>
                             <div className="product-image-holder">
                                 {singleObject.offer && (
                                     <div className="product-offer">

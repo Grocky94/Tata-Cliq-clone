@@ -1,0 +1,147 @@
+#wishlist-b {
+    background-color: #ececec;
+}
+
+#Wishlist-page-title {
+    height: 10vh;
+    width: 100%;
+    border: 1px solid rgb(241, 241, 241);
+    background-color: white;
+    position: sticky;
+    top: 10vh;
+    z-index: 1;
+}
+
+#Wishlist-page-title-aligner {
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}
+
+#Wishlist-page-title-name {
+    height: 8vh;
+    width: fit-content;
+    /* border: 1px solid #000; */
+    margin-left: 2%;
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+#wishlist-right-side {
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-around;
+    background-color: white;
+}
+
+#wishlist-right-side::-webkit-scrollbar {
+    display: none;
+}
+.wishlist-product-cart {
+    height: 60vh;
+    width: 20%;
+    border: 1px solid #ebe7e7;
+    /* margin-top: 2px; */
+    margin-top: 2%;
+}
+
+.wishlist-product-image-holder {
+    height: 35vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wishlist-product-image-holder>img {
+    height: 100%;
+    width: 100%;
+}
+
+.wishlist-heart-div {
+    position: absolute;
+    height: 15%;
+    width: 15%;
+    border-radius: 5px;
+    border: 1px solid #d7d5d5;
+    margin-top: 5%;
+    background-color: white;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wishlist-heart-div>i {
+    font-size: 1.2em;
+}
+
+#add-to-bag {
+    height: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin: 2% 0;
+    border: 1px solid #da1c5c;
+    background-color: #da1c5c;
+}
+
+.product-description {
+    height: fit-content;
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid #000; */
+
+}
+
+.product-brand-name {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.material-info {
+    font-size: 1em;
+}
+
+.star-rating {
+    height: 20px;
+    width: fit-content;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.star-rating>i {
+    font-size: 0.6em;
+    margin-left: 5px;
+    color: green;
+}
+
+.align-para {
+    display: flex;
+    align-items: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.count {
+    margin-left: 5px;
+}

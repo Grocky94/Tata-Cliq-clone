@@ -1,7 +1,7 @@
 import Navbar from '../Navbar';
 import '../multi-products/MultiProductsWomens.css'
 // import { useNavigate } from "react-router-dom"
-import WomenData from "../../WomensMultipleProduct.json"
+import WomenData from "../Data/WomensMultipleProduct.json"
 import Footer from "../Footer"
 const MultiProductsWomens = () => {
 

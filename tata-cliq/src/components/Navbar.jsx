@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./../components/Navbar.css"
 import { useNavigate } from "react-router-dom"
+import MultiProductsHomeKitchen from "./multi-products/MultiProductsHomeKitchen";
 function Navbar() {
     const [dropDown, setDropDown] = useState(false);
     const [color, setColor] = useState(false);
@@ -28,19 +29,43 @@ function Navbar() {
     function Fallup2() {
         setDropDown2(false);
     }
-    function ToNavigate() {
-        redirect("/mensWear")
-    }
     function BackHome() {
         redirect("/")
     }
-    function Profile(){
+    function Profile() {
         redirect('/profile')
     }
-    function Cart(){
+    function Cart() {
         redirect('/cart')
     }
+    function Wishlist(){
+        redirect('/wishlist')
+    }
+    function MensMultipleProduct() {
+        redirect("/multiProductsMens ")
+    }
+    function WomensMultipleProduct() {
+        redirect("/multiProductWomens")
+    }
+    function KidsMultipleProduct() {
+        redirect("/multiProductKids")
+    }
+    function HomeKitchenMultiProducts() {
+        redirect('/multiProductHomeKitchen')
+    }
 
+    function BeautyMultipleProduct() {
+        redirect('/multiProductBeauty')
+    }
+    function GadgetsMultipleProduct() {
+        redirect('/multiProductGadgets')
+    }
+    function JewelleryMultipleProduct() {
+        redirect('/multiProductJewellery')
+    }
+    function AccessoriesMultipleProduct() {
+        redirect('/multiProductAccessories')
+    }
     return (
         <div id="nav">
             <div id="align-nav">
@@ -72,7 +97,7 @@ function Navbar() {
                             </div>
                         </div>
                         <div className="lower-nav-list">
-                            <div><i class="fa-regular fa-heart"></i></div>
+                            <div onClick={Wishlist}><i class="fa-regular fa-heart"></i></div>
                             <div onClick={Cart}><i class="fa-solid fa-bag-shopping" ></i></div>
                         </div>
                     </div>
@@ -80,35 +105,35 @@ function Navbar() {
             </div>
             {dropDown && <div className="category-dropdown" onMouseEnter={FallDown} onMouseLeave={Fallup} style={{ backgroundColor: backGround ? "white" : "black", color: color ? "black" : "white" }}
             >
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={WomensMultipleProduct}>
                     <p>Women's Fashion</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards" onClick={ToNavigate}>
+                <div className="category-dropdown-cards" onClick={MensMultipleProduct}>
                     <p>Men's Fashion</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={KidsMultipleProduct}>
                     <p>Kid's Fashion</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={HomeKitchenMultiProducts}>
                     <p>Home & Kitchen</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={BeautyMultipleProduct}>
                     <p>Beauty</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={GadgetsMultipleProduct}>
                     <p>Gadgets</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={JewelleryMultipleProduct}>
                     <p>Jewellery</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <div className="category-dropdown-cards">
+                <div className="category-dropdown-cards" onClick={AccessoriesMultipleProduct}>
                     <p>Accessories</p>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>

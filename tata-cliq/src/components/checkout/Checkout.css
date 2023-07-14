@@ -1,0 +1,461 @@
+.checkout-b {
+    background-color: #ececec;
+}
+
+#Checkout-navbar {
+    height: 10vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#Checkout-navbar-align {
+    height: 10vh;
+    width: 80%;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#Checkout-navbar-logo-holder {
+    height: 8vh;
+    width: 8%;
+    /* border: 1px solid #000; */
+    position: absolute;
+    left: 2%;
+    cursor: pointer;
+}
+
+#Checkout-navbar-logo-holder>img {
+    height: 100%;
+    width: 100%;
+}
+
+#Checkout-navbar-profile-icon {
+    height: 8vh;
+    width: 10%;
+    /* border: 1px solid #000; */
+    position: absolute;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#Checkout-navbar-profile-icon>div {
+    height: 5vh;
+    width: 35%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Checkout-navbar-profile-icon>div:nth-child(1) {
+    border-radius: 50px;
+    background-color: white;
+}
+
+#Checkout-navbar-profile-icon>div>img {
+    height: 100%;
+    width: 100%;
+}
+
+#Checkout-navbar-profile-icon>div:nth-child(2)>i {
+    color: white;
+}
+
+#Checkout-page-title {
+    height: 10vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    background-color: white;
+    position: sticky;
+    top: 10vh;
+    z-index: 1;
+}
+
+#Checkout-page-title-aligner {
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}
+
+#Checkout-page-title-name {
+    height: 8vh;
+    width: fit-content;
+    /* border: 1px solid #000; */
+    margin-left: 2%;
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+#checkout-body {
+    /* height: 90vh; */
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkout-left-inner-body {
+    height: 70vh;
+    width: 60%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#checkout-left-inner-body-align {
+    /* height: 75vh; */
+    width: 95%;
+    /* border: 1px solid #000; */
+}
+
+#checkout-first-label {
+    height: 8vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}
+
+#circle-for-numbering {
+    height: 8vh;
+    width: 10%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circle-formed {
+    height: 3vh;
+    width: 30%;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkout-first-label>div:nth-child(2) {
+    height: 8vh;
+    width: 75%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+#checkout-first-label>div:nth-child(3) {
+    height: 4vh;
+    width: fit-content;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+#checkout-right-inner-body {
+    /* height: 80vh; */
+    width: 38%;
+    /* border: 1px solid #000; */
+}
+
+#input-area-parent {
+    /* height: 60vh; */
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#input-area-left {
+    /* height: 55vh; */
+    width: 48%;
+    /* border: 1px solid #000; */
+}
+
+#input-area-right {
+    /* height: 55vh; */
+    width: 48%;
+    /* border: 1px solid #000; */
+}
+
+
+.first-input {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* border: 1px solid #000; */
+    margin-top: 8%;
+
+}
+
+.form {
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 46%;
+    margin-left: 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.form100 {
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.userDetails {
+    height: 100%;
+    width: 100%;
+    border: none;
+    /* padding-top: 20px; */
+    /* border:1px solid black; */
+    outline: none;
+    margin-top: 5%;
+    background-color: white;
+
+}
+
+.form> :nth-child(2) {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    text-align: start;
+    height: 100%;
+    width: 100%;
+    font-size: 0.8em;
+    pointer-events: none;
+}
+
+.form100> :nth-child(2) {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    text-align: start;
+    height: 100%;
+    width: 100%;
+    font-size: 0.8em;
+    pointer-events: none;
+}
+
+.input-name {
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.userDetails:focus+.userDetails-label .input-name
+
+/* #userDetails:valid+.userDetails-label .input-name{ */
+    {
+    transform: translateY(-110%);
+
+}
+
+.userDetails:focus+.userDetails-label::after {
+    transform: translateX(0%);
+}
+
+.land-mark {
+    height: 6vh;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 5%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f2f3;
+}
+
+.land-mark>p {
+    margin-left: 2%;
+}
+
+.land-mark>i {
+    margin-right: 2%;
+}
+
+.tick-box-parent {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.div-for-circle {
+    height: 5vh;
+    width: 6%;
+    /* border: 1px solid #000; */
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-for-circle>div {
+    height: 70%;
+    width: 70%;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.checkbox {
+    background-image: url(https://www.tatacliq.com/src/general/components/img/checkbox-untick.svg);
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 300ms
+}
+
+.checkbox.checked {
+    background-image: url(https://www.tatacliq.com/src/general/components/img/checkbox-tick.svg);
+}
+
+.tick-box-parent>div:nth-child(2) {
+    margin-right: 50%;
+}
+
+.cancelNsave {
+    height: 8vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}
+
+.cancelNsave-align {
+    height: 5vh;
+    width: 50%;
+    /* border: 1px solid #000; */
+    margin-left: auto;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cancelNsave-align>p {
+    color: red;
+}
+
+.cancelNsave-align>button {
+    height: 80%;
+    width: 40%;
+    border: 1px solid red;
+    background-color: red;
+    color: #f5f2f3;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+#cart-calcuation {
+    /* height: 40vh; */
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-top: 2%;
+    background-color: white;
+}
+
+#cart-bill-list {
+    width: 90%;
+    /* border: 1px solid #000; */
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.cart-price-list {
+    height: 4vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+#checkout-total {
+    height: 15vh;
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+
+}
+
+#total-figure-checkout {
+    height: 10vh;
+    width: 90%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    /* margin-left: 5%; */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#safe-pay {
+    height: 10vh;
+    width: 100%;
+    border: 1px solid #000;
+    margin-top: 5%;
+    display: flex;
+}
+
+#safe-pay>div:nth-child(1) {
+    height: 100%;
+    width: 20%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+
+}
+
+#safe-pay>div:nth-child(2) {
+    height: 100%;
+    width: 70%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+}

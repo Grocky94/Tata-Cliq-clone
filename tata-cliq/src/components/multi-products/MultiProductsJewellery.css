@@ -199,9 +199,9 @@ background-color: white;
     border-bottom: none;
 }
 
-#beauty-product-cart {
+.product-cart {
     height: 60vh;
-    width: 30%;
+    width: 24%;
     border: 1px solid #ebe7e7;
     /* margin-top: 2px; */
     margin-top: 2%;
@@ -228,8 +228,8 @@ background-color: white;
     width: 40%;
     margin-top: 5%;
     /* border: 1px solid #000; */
-    background-color: red;
-    color: white;
+    background-color:#fff8bf;
+    color: black;
     display: flex;
     align-items: center;
 }

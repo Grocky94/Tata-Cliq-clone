@@ -85,8 +85,9 @@
     width: 200px;
     border: 1px solid #000;
     position: absolute;
+    z-index: 10;
     right: -10%;
-    top: 6%; 
+    top: 6%;
     background-color: white;
 }
 
@@ -133,16 +134,13 @@
     /* border: 1px solid #000; */
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 #cart-page-title-name {
     height: 8vh;
     width: fit-content;
     /* border: 1px solid #000; */
-    position: absolute;
-    left: 2%;
-    z-index: 0;
+    margin-left: 2%;
     font-size: 2rem;
     font-weight: 500;
     display: flex;
@@ -154,10 +152,11 @@
     width: fit-content;
     /* border: 1px solid #000; */
     display: flex;
+    position: relative;
+    z-index: 1;
     align-items: center;
-    position: absolute;
-    z-index: 0;
-    right: 2%;
+    margin-left: auto;
+    margin-right: 2%;
     gap: 2%;
 }
 
@@ -169,11 +168,13 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    position: relative;
 }
 
 #cart-pincode>div:nth-child(2) {
     width: 65%;
     border-bottom: 1px solid black;
+    position: relative;
 
 }
 

@@ -20,7 +20,9 @@ const Cart = () => {
     function MultipleProduct() {
         takeMeTo('/multiProductsMens')
     }
-
+    function Checkout() {
+        takeMeTo('/checkout')
+    }
     return (
         <div id="cart-screen">
             <div id="cart-navbar">
@@ -37,52 +39,52 @@ const Cart = () => {
                         </div>
                     </div>
                     {dropDown2 && <div id="cart-side" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>
-                <div className="cart-side-list" onClick={Profile}>
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/general/components/img/profile.png" />
-                    </div>
-                    <p>My Account</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/general/components/img/order-history.svg" />
-                    </div>
-                    <p>Order History</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/general/components/img/WL7.svg" />
-                    </div>
-                    <p>My Wishlist</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/account/components/img/alert.svg" />
-                    </div>
-                    <p>Alert & Coupon</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/account/components/img/giftCards.svg" />
-                    </div>
-                    <p>Gift Card</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/account/components/img/cliqCash.svg" />
-                    </div>
-                    <p>CliQ Cash</p>
-                </div>
-                <div className="cart-side-list">
-                    <div className="cart-side-list-img-hold">
-                        <img src="https://www.tatacliq.com/src/general/components/img/settingsblack.svg" />
-                    </div>
-                    <p>LogOut</p>
-                </div>
-            </div>}
+                        <div className="cart-side-list" onClick={Profile}>
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/general/components/img/profile.png" />
+                            </div>
+                            <p>My Account</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/general/components/img/order-history.svg" />
+                            </div>
+                            <p>Order History</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/general/components/img/WL7.svg" />
+                            </div>
+                            <p>My Wishlist</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/account/components/img/alert.svg" />
+                            </div>
+                            <p>Alert & Coupon</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/account/components/img/giftCards.svg" />
+                            </div>
+                            <p>Gift Card</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/account/components/img/cliqCash.svg" />
+                            </div>
+                            <p>CliQ Cash</p>
+                        </div>
+                        <div className="cart-side-list">
+                            <div className="cart-side-list-img-hold">
+                                <img src="https://www.tatacliq.com/src/general/components/img/settingsblack.svg" />
+                            </div>
+                            <p>LogOut</p>
+                        </div>
+                    </div>}
                 </div>
             </div>
-            
+
             <div id="cart-page-title">
                 <div id="cart-page-title-aligner">
                     <div id="cart-page-title-name">My Bag</div>
@@ -199,7 +201,7 @@ const Cart = () => {
                         <div id="cart-total">
                             <div id="total-figure">Total<br />
                                 ₹ 4368</div>
-                            <button id="Checkout-btn">Checkout</button>
+                            <button id="Checkout-btn" onClick={Checkout}>Checkout</button>
                         </div>
                     </div>
                     <div id="safe-pay">
