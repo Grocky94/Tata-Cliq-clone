@@ -79,6 +79,17 @@
     align-items: center;
 }
 
+.upper-nav-list-product-show {
+    margin-left: 1%;
+    padding: 0 1%;
+    color: white;
+    /* border: 1px solid #000; */
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 .upper-nav-list-addition-width>a {
     background: transparent;
 }
@@ -247,15 +258,17 @@
     justify-content: space-between;
     cursor: pointer;
 }
-#login-btn{
-    height:4vh;
-    width:80%;
+
+#login-btn {
+    height: 4vh;
+    width: 80%;
     background-color: #c60543;
     border: 1px solid #c60543;
     color: white;
     margin: auto;
     border-radius: 50px;
 }
+
 .profile-side-list-img-hold {
     height: 100%;
     width: 20%;
@@ -278,7 +291,7 @@
 }
 
 #signup {
-    height: 50vh;
+    /* height: 50vh; */
     width: 40%;
     border: 1px solid #000;
     position: fixed;
@@ -319,7 +332,34 @@
     font-weight: 600;
     font-size: 1.2em;
 }
-#login{
+
+.toggler {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+#login-switch-btn {
+    height: 4vh;
+    width: fit-content;
+    padding: 0 1%;
+    margin-bottom: 2%;
+}
+
+.user-role {
+    height: 5vh;
+    width: 80%;
+    border: 1px solid #000;
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+}
+
+.user-role>select {
+    height: 100%;
+    width: 100%;
+}
+
+#login {
     height: 50vh;
     width: 40%;
     border: 1px solid #000;
@@ -331,21 +371,26 @@
     /* text-align: center; */
     font-size: 1.2em;
 }
+
 #login>h1 {
     text-align: center;
 }
-#login-form{
+
+#login-form {
     margin-top: 5%;
 }
+
 #login-form>label {
     margin-left: 10%;
     margin-right: auto;
 }
+
 #login-form>input {
     height: 5vh;
     width: 80%;
     margin-left: 10%;
 }
+
 #login-form>input[type="submit"] {
     margin-top: 5%;
     background-color: black;
@@ -353,11 +398,87 @@
     font-weight: 600;
     font-size: 1.2em;
 }
-#login-form>P:last-child{
-    margin-left:10%;
+
+#login-form>P:last-child {
+    margin-left: 10%;
     margin-top: 2%;
 }
-#click{
-    height:3vh;
+
+#click {
+    height: 3vh;
     width: 15%;
+}
+
+.add-product-bg-screen {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    /* display: none; */
+}
+
+.add-product-div {
+    /* height: 50vh; */
+    width: 40%;
+    border: 1px solid #000;
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 30%;
+    background-color: white;
+    color: black;
+    /* text-align: center; */
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+.add-product-div>h1 {
+    text-align: center;
+}
+
+#add-product-form {
+    margin-top: 5%;
+    line-height: 5vh;
+}
+
+#add-product-form>label {
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+#add-product-form>input {
+    height: 5vh;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.add-product-select-div {
+    height: 5vh;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.add-product-select-div>select {
+    height: 100%;
+    width: 100%;
+}
+
+#add-product-form>input[type="submit"] {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.closer {
+    position: absolute;
+    right: 4%;
+    top: 2%;
+    cursor: pointer;
 }

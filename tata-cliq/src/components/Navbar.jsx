@@ -1,6 +1,12 @@
-import { useEffect, useState } from "react"
+import React from "react";
+import { useContext, useEffect, useState } from "react"
 import "./../components/Navbar.css"
 import { NavLink, useNavigate } from "react-router-dom"
+import { toast } from "react-toastify";
+import { v4 as uuidv4 } from 'uuid';
+import { AuthContext } from "./../context/AuthContext"
+
+
 function Navbar() {
     const [log, setLog] = useState(false);
     const [signup, setsignup] = useState(false);
@@ -10,11 +16,56 @@ function Navbar() {
     const [rotate, setRotate] = useState(false)
     const redirect = useNavigate()
     const [dropDown2, setDropDown2] = useState(false);
-    const [userData, setUserData] = useState({ name: "", email: "", password: "" });
+    const [userData, setUserData] = useState({ name: "", email: "", password: "", role: "buyer", cart: [] });
     const [currentData, setCurrentData] = useState({});
+    const [addproduct, setAddProduct] = useState(false);
+    const [product, setproduct] = useState({ name: "", image: "", price: "", category: "" })
+    const {state,login, logout} = useContext(AuthContext);
 
+
+    //// add product //////////
+    const newProductChange = (event) => {
+        setproduct({ ...product, [event.target.name]: event.target.value })
+    }
+    console.log(product);
+    const newProductCategoryChange = (event) => {
+        setproduct({ ...product, ['category']: event.target.value })
+    }
+    const newProductSubmit = (event) => {
+        event.preventDefault();
+        if (product.name && product.image && product.price && product.category) {
+            const allProduct = JSON.parse(localStorage.getItem("Products")) || []
+            console.log(allProduct);
+            const randomID = uuidv4();
+            product.id = randomID
+            allProduct.push(product);
+            localStorage.setItem("Products", JSON.stringify(allProduct));
+            setproduct({ name: '', image: '', price: '', category: '' })
+            toast.success("product has been added");
+            redirect("/newlyaddedproduct");
+        } else {
+            toast.error("fill all details");
+        }
+    }
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (user) {
+            if (user?.role == "buyer") {
+                toast.error("you are not a seller")
+            }
+        } else {
+            toast.error("you have not logged into your account")
+            setAddProduct(false);
+        }
+    }, [state])
+
+    ////registration part///////
     const handleRegisterInput = (event) => {
         setUserData({ ...userData, [event.target.name]: event.target.value });
+    }
+
+    const handleselectorRole = (event) => {
+        setUserData({ ...userData, role: event.target.value })
     }
 
     const handleRegisterOnsubmit = (event) => {
@@ -22,15 +73,18 @@ function Navbar() {
 
         if (userData.name && userData.email && userData.password) {
             const user = JSON.parse(localStorage.getItem("Users")) || [];
-            const obj = { name: userData.name, email: userData.email, password: userData.password };
+            const obj = { name: userData.name, email: userData.email, password: userData.password, role: userData.role };
             user.push(obj);
             localStorage.setItem("Users", JSON.stringify(user));
-            alert("registration done");
+            toast.success("registration done");
             setsignup(false);
         } else {
-            alert("please fill all fields")
+            toast.error("please fill all fields")
         }
     }
+
+
+    ///// login part /////////////
 
     const handleLoginInput = (event) => {
         setUserData({ ...userData, [event.target.name]: event.target.value })
@@ -42,18 +96,19 @@ function Navbar() {
             const user = JSON.parse(localStorage.getItem("Users"));
             for (let i = 0; i < user.length; i++) {
                 if (user[i].email == userData.email && user[i].password == userData.password) {
-                    alert("login successful")
-                    localStorage.setItem("Current-User", JSON.stringify(user));
+                    toast.success("login successful")
+                    login(user[i])
                     setLog(false);
                     redirect('/');
                 } else {
-                    alert('credential didnt match')
+                    toast.error('credential didnt match')
                 }
 
             }
         }
 
     }
+
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("Current-User"))
         const alluser = JSON.parse(localStorage.getItem("Users"));
@@ -67,6 +122,7 @@ function Navbar() {
 
         }
     })
+
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("Current-User"));
         //   console.log(user, 'user-here'); 
@@ -74,11 +130,11 @@ function Navbar() {
             setsignup(true);
         }
     })
-    function logout() {
-        localStorage.removeItem('Current-User');
-        setsignup(false);
-        alert("logout successful");
-    }
+    // function logout() {
+    //     localStorage.removeItem('Current-User');
+    //     setsignup(false);
+    //     alert("logout successful");
+    // }
     function userloginOpen() {
         setLog(true);
         const user = JSON.parse(localStorage.getItem("Current-User"));
@@ -93,7 +149,12 @@ function Navbar() {
             setsignup(false)
         }
     }
-
+    function addingProduct() {
+        setAddProduct(true);
+    }
+    function closingaddproduct() {
+        setAddProduct(false);
+    }
 
 
     function FallDown() {
@@ -119,7 +180,12 @@ function Navbar() {
         redirect("/")
     }
     function Profile() {
-        redirect('/profile')
+        const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (user) {
+            redirect('/profile')
+        } else {
+            toast.error("please login first");
+        }
     }
 
 
@@ -133,7 +199,11 @@ function Navbar() {
                 </div>
                 <div id="rightSide">
                     <div id="upper-rightSide">
-                        <div className="upper-nav-list-addition-width"><a>Tata CliQ Luxury</a></div>
+                        <div className="upper-nav-list-addition-width"><a>Tata CliQ Luxury</a>
+                            <div className="upper-nav-list-product-show" onClick={() => redirect('/newlyaddedproduct')}>Newly Added Products</div>
+                            {userData?.role == "seller" && <div className="upper-nav-list-product-show" onClick={addingProduct}>Products To Add</div>}
+                            <div className="upper-nav-list-product-show">Cart</div>
+                        </div>
                         <div className="upper-nav-list">CliQ Cash</div>
                         <div className="upper-nav-list">Gift Card</div>
                         <div className="upper-nav-list">CliQ Care</div>
@@ -264,7 +334,14 @@ function Navbar() {
                         <input type="email" name="email" onChange={handleRegisterInput} /><br />
                         <label>Password:</label><br />
                         <input type="password" name="password" onChange={handleRegisterInput} />
+                        <div className="user-role">
+                            <select onChange={handleselectorRole}>
+                                <option value="buyer">Buyer</option>
+                                <option value="seller">Seller</option>
+                            </select>
+                        </div>
                         <input type="submit" />
+                        <p className="toggler">If already user <button id="login-switch-btn" onClick={() => setsignup(false)}>click here</button></p>
                     </form>
                 </div>}
                 {!signup && <div id="login">
@@ -275,9 +352,36 @@ function Navbar() {
                         <label>Password:</label><br />
                         <input type="password" name="password" onChange={handleLoginInput} />
                         <input type="submit" />
-                        <p>If not sign-up <button id="click">click here</button></p>
+                        <p>If not sign-up <button id="click" onClick={() => setsignup(true)}>click here</button></p>
                     </form>
                 </div>}
+            </div>}
+            {addproduct && <div className="add-product-bg-screen">
+                <div className="add-product-div">
+                    <h1>Add Product</h1><span className="closer" onClick={closingaddproduct}>X</span>
+                    <form id="add-product-form" onSubmit={newProductSubmit}>
+                        <label>Product Name:</label>
+                        <input type="text" name="name" onChange={newProductChange} /><br />
+                        <label>Product Image:</label>
+                        <input type="text" name="image" onChange={newProductChange} /><br />
+                        <label>Product Price:</label>
+                        <input type="numbers" name="price" onChange={newProductChange} /><br />
+                        <label>Product Category:</label>
+                        <div className="add-product-select-div">
+                            <select onChange={newProductCategoryChange}>
+                                <option value="Womens">Womens</option>
+                                <option value="Mens">Mens</option>
+                                <option vlaue="Kids">Kids</option>
+                                <option value="Home & Kitchen">Home & Kitchen</option>
+                                <option value="Beauty">Beauty</option>
+                                <option value="Gadgets">Gadgets</option>
+                                <option value="Jewellery">Jewellery</option>
+                                <option value="excessories">excessories</option>
+                            </select>
+                        </div>
+                        <input type="submit" />
+                    </form>
+                </div>
             </div>}
         </div>
     )
