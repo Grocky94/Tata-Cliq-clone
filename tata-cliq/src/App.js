@@ -48,7 +48,7 @@ function App() {
         <Route exact path="/multiProductAccessories" element={<MultiProductsAccessories />} />
         <Route exact path="/womensWear" element={<WomensWear />} />
         <Route exact path="/kids" element={<Kids />} />
-        <Route exact path="/SingleProduct" element={<SingleProduct />} />
+        <Route exact path="/SingleProduct/:id" element={<SingleProduct />} />
         <Route exact path="/profile" element={<ProfilePage />} />
       </Routes>
     </div>

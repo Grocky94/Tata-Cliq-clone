@@ -8,6 +8,7 @@ import { AuthContext } from "./../context/AuthContext"
 
 
 function Navbar() {
+
     const [log, setLog] = useState(false);
     const [signup, setsignup] = useState(false);
     const [dropDown, setDropDown] = useState(false);
@@ -19,15 +20,25 @@ function Navbar() {
     const [userData, setUserData] = useState({ name: "", email: "", password: "", role: "buyer", cart: [] });
     const [currentData, setCurrentData] = useState({});
     const [addproduct, setAddProduct] = useState(false);
-    const [product, setproduct] = useState({ name: "", image: "", price: "", category: "" })
-    const {state,login, logout} = useContext(AuthContext);
+    const [product, setproduct] = useState({ name: "", image: "", price: "", category: "womens" })
+    const { state, Login, Logout } = useContext(AuthContext);
+    const [user, setUser] = useState(null);
+    const [isUserLogedIn, setIsUserLogedIn] = useState(false);
+    // console.log(user, "from navbar")
 
+    useEffect(()=>{
+        if(state?.user?.email){
+            setIsUserLogedIn(true)
+        }else{
+            setIsUserLogedIn(false)
+        }
+    }, [state])
 
     //// add product //////////
     const newProductChange = (event) => {
         setproduct({ ...product, [event.target.name]: event.target.value })
     }
-    console.log(product);
+    // console.log(product);
     const newProductCategoryChange = (event) => {
         setproduct({ ...product, ['category']: event.target.value })
     }
@@ -35,7 +46,7 @@ function Navbar() {
         event.preventDefault();
         if (product.name && product.image && product.price && product.category) {
             const allProduct = JSON.parse(localStorage.getItem("Products")) || []
-            console.log(allProduct);
+            // console.log(allProduct);
             const randomID = uuidv4();
             product.id = randomID
             allProduct.push(product);
@@ -48,16 +59,45 @@ function Navbar() {
         }
     }
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Current-User"));
-        if (user) {
-            if (user?.role == "buyer") {
-                toast.error("you are not a seller")
-            }
+        // const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (state?.user) {
+            setsignup(true);
+            setUser(state?.user); // Update the 'user' state with the value from localStorage
+            // } if (user) {
+            //     if (user?.role === "seller") {
+            //         setAddProduct(true);
+            //     } else {
+            //         setAddProduct(false);
+            //     }
         } else {
-            toast.error("you have not logged into your account")
             setAddProduct(false);
         }
-    }, [state])
+
+    }, [state]);
+    useEffect(() => {
+        if (state?.user) {
+            let allUser = JSON.parse(localStorage.getItem("Users"));
+            for (let i = 0; i < allUser.length; i++) {
+                if (allUser[i].email == state.user.email) {
+                    setUserData(allUser[i])
+                }
+            }
+        }
+    }, []);
+
+    // useEffect(() => {
+    //     // const user = JSON.parse(localStorage.getItem("Current-User"));
+
+    //     if (state?.user) {
+    //         if (state?.user?.role == "buyer") {
+    //             toast.error("you are not a seller")
+    //         }
+    //         // } else {
+    //         //     toast.error("you have not logged into your account")
+    //         //     // setAddProduct(false);
+    //         // }
+    //     }
+    // }, [state])
 
     ////registration part///////
     const handleRegisterInput = (event) => {
@@ -73,7 +113,7 @@ function Navbar() {
 
         if (userData.name && userData.email && userData.password) {
             const user = JSON.parse(localStorage.getItem("Users")) || [];
-            const obj = { name: userData.name, email: userData.email, password: userData.password, role: userData.role };
+            const obj = { name: userData.name, email: userData.email, password: userData.password, role: userData.role, cart: [] };
             user.push(obj);
             localStorage.setItem("Users", JSON.stringify(user));
             toast.success("registration done");
@@ -94,39 +134,45 @@ function Navbar() {
         event.preventDefault();
         if (userData.email && userData.password) {
             const user = JSON.parse(localStorage.getItem("Users"));
+            let flag = false;
             for (let i = 0; i < user.length; i++) {
                 if (user[i].email == userData.email && user[i].password == userData.password) {
+                    flag = true;
+                    localStorage.setItem("Current-User", JSON.stringify(user[i]));
+                    Login(user[i]);
                     toast.success("login successful")
-                    login(user[i])
                     setLog(false);
                     redirect('/');
-                } else {
-                    toast.error('credential didnt match')
                 }
 
             }
+            if (flag == false) {
+                toast.error("details didnt match");
+            }
+        } else {
+            toast.error("fill all details")
         }
 
     }
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Current-User"))
+        // const user = JSON.parse(localStorage.getItem("Current-User"))
         const alluser = JSON.parse(localStorage.getItem("Users"));
-        if (user) {
+        if (state?.user) {
             for (let i = 0; i < alluser.length; i++) {
-                console.log(alluser[i])
-                if (alluser[i].email === user.email) {
+                // console.log(alluser[i])
+                if (alluser[i].email === state.user.email) {
                     setCurrentData(alluser[i])
                 }
             }
 
         }
-    })
+    }, [state])
 
     useEffect(() => {
-        let user = JSON.parse(localStorage.getItem("Current-User"));
+        // let user = JSON.parse(localStorage.getItem("Current-User"));
         //   console.log(user, 'user-here'); 
-        if (user) {
+        if (state?.user) {
             setsignup(true);
         }
     })
@@ -137,18 +183,20 @@ function Navbar() {
     // }
     function userloginOpen() {
         setLog(true);
-        const user = JSON.parse(localStorage.getItem("Current-User"));
-        if (!user) {
+        // const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (!state?.user) {
             setsignup(true)
         }
     }
     function userloginClose() {
         setLog(false)
-        const user = JSON.parse(localStorage.getItem("Current-User"));
-        if (!user) {
+        // const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (!state?.user) {
             setsignup(false)
         }
     }
+
+    /// modal open and close//
     function addingProduct() {
         setAddProduct(true);
     }
@@ -201,15 +249,14 @@ function Navbar() {
                     <div id="upper-rightSide">
                         <div className="upper-nav-list-addition-width"><a>Tata CliQ Luxury</a>
                             <div className="upper-nav-list-product-show" onClick={() => redirect('/newlyaddedproduct')}>Newly Added Products</div>
-                            {userData?.role == "seller" && <div className="upper-nav-list-product-show" onClick={addingProduct}>Products To Add</div>}
-                            <div className="upper-nav-list-product-show">Cart</div>
+                            {state?.user?.role == "seller" && <div className="upper-nav-list-product-show" onClick={addingProduct}>Products To Add</div>}
                         </div>
                         <div className="upper-nav-list">CliQ Cash</div>
                         <div className="upper-nav-list">Gift Card</div>
                         <div className="upper-nav-list">CliQ Care</div>
                         <div className="upper-nav-list">Track Order</div>
-                        {!currentData.name ? (<div className="upper-nav-list" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>Sign in/ SignUp</div>) :
-                            (<div className="upper-nav-list" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>{currentData.name}</div>)}
+                        {!isUserLogedIn ? (<div className="upper-nav-list" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>Sign in/ SignUp</div>) :
+                            (<div className="upper-nav-list" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>{state?.user?.name}</div>)}
 
 
                     </div>
@@ -228,7 +275,7 @@ function Navbar() {
                         </div>
                         <div className="lower-nav-list">
                             <NavLink to="/wishlist" className="inner-lower"><i class="fa-regular fa-heart"></i></NavLink>
-                            <NavLink to="/cart" className="inner-lower"><i class="fa-solid fa-bag-shopping" ></i></NavLink>
+                            {state?.user?.role == "buyer" && <NavLink to="/cart" className="inner-lower"><i class="fa-solid fa-bag-shopping" ></i></NavLink>}
                         </div>
                     </div>
                 </div>
@@ -269,12 +316,12 @@ function Navbar() {
                 </NavLink>
             </div>}
             {dropDown2 && <div id="profile-side" onMouseEnter={FallDown2} onMouseLeave={Fallup2}>
-                {currentData.name ? (
+                {state?.user?.name ? (
                     <div className="profile-side-list">
                         <div className="profile-side-list-img-hold">
                             <img src="https://www.tatacliq.com/src/general/components/img/profile.png" />
                         </div>
-                        <p>{currentData.name}</p>
+                        <p>{state?.user?.name}</p>
                     </div>
                 ) : (
                     <div className="profile-side-list" onClick={userloginOpen}>
@@ -317,12 +364,15 @@ function Navbar() {
                     </div>
                     <p>CliQ Cash</p>
                 </div>
-                <div className="profile-side-list" onClick={logout}>
+                {currentData.name ? <div className="profile-side-list" onClick={() => {
+                    Logout();
+                    redirect("/");
+                }}>
                     <div className="profile-side-list-img-hold">
                         <img src="https://www.tatacliq.com/src/general/components/img/settingsblack.svg" />
                     </div>
                     <p>LogOut</p>
-                </div>
+                </div> : null}
             </div>}
             {log && <div id="parent-signup">
                 {signup && <div id="signup">

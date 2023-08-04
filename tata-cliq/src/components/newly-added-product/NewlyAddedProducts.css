@@ -24,6 +24,11 @@
     position: relative;
     overflow: hidden;
 }
+.all-product-image-holder>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .all-product-heart-div {
     position: absolute;

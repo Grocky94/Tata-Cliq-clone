@@ -1,23 +1,79 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./SingleProduct.css"
 import Footer from "../Footer"
 import Navbar from "../Navbar"
+import { useNavigate, useParams } from 'react-router-dom'
+import { toast } from "react-toastify"
+
+
+
 const SingleProduct = () => {
+    const [userLogged, setUserLogged] = useState(false);
+    const [singleItem, setSingleItem] = useState({})
+    const { id } = useParams();
+    const router = useNavigate()
+    // for getting selected item in page from all product
+    useEffect(() => {
+        const product = JSON.parse(localStorage.getItem("Products"));
+        if (id && product.length) {
+            const selectedItem = product.find((item) =>
+                item.id == id);
+            setSingleItem(selectedItem);
+        }
+    }, [id]);
+
+    // for checking if user has logged in or not 
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("Current-User"));
+        if (user) {
+            setUserLogged(true)
+
+        }
+    }, [])
+
+
+    
+    const addtocart = () => {
+        if (userLogged) {
+            const alluser = JSON.parse(localStorage.getItem("Users"));
+            const user = JSON.parse(localStorage.getItem("Current-User"));
+
+            for (let i = 0; i < alluser.length; i++) {
+
+                if (alluser[i].email == user.email && alluser[i].password == user.password) {
+                    if (alluser[i].role == "buyer") {
+                        alluser[i].cart.push(singleItem);
+                        localStorage.setItem("Users", JSON.stringify(alluser))
+                        toast.success("product added succesfull")
+                        router("/cart")
+                    } else {
+                        toast.error("seller not allowed to add product in cart")
+                    }
+                }
+            }
+        } else {
+            toast.error("please login first");
+        }
+    }
+
+
+    
+
     return (
         <div>
             <Navbar/>
             <div id="single-product-screen">
-                <div id="single-product-screen-align">
+                {id && <div id="single-product-screen-align">
                     <div id="single-product-leftSide">
                         <div id="cutshort-leftside">
                             <div id="single-product-larger-leftSide-img-frame">
-                                <div><img src="https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106111.jpeg"/></div>
-                                <div><img src="https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106132.jpeg"/></div>
+                                <div><img src={singleItem?.image}/></div>
+                                <div><img src={singleItem?.image}/></div>
                             </div>
                             <div id="single-product-leftSide-img-frame">
-                                <div><img src="https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106083.jpeg"/></div>
-                                <div><img src="https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106154.jpeg"/></div>
-                                <div><img src="https://img.tatacliq.com/images/i10/437Wx649H/MP000000016645596_437Wx649H_202302241106105.jpeg"/></div>
+                                <div><img src={singleItem?.image}/></div>
+                                <div><img src={singleItem?.image}/></div>
+                                <div><img src={singleItem?.image}/></div>
                             </div>
                         </div>
                     </div>
@@ -27,11 +83,10 @@ const SingleProduct = () => {
                             <p>Popular: Recently wishlisted 56 times</p>
                         </div>
                         <div className='product-detailsNDescription'>
-                            <p className='given-brand-name'>Puma</p>
-                            <p>Puma ESS+ Black Cotton Regular Fit Printed T-Shirt</p>
-                            <p><span>₹ 739</span><span className='colorItoff'>MRP: ₹1999</span><span className='colorItGreen'>63% off</span></p>
+                            <p className='given-brand-name'>{singleItem?.name}</p>
+                            <p><span>₹ {singleItem?.price}</span><span className='colorItGreen'>63% off</span></p>
                             <p className='smallText'>inclusive of all taxes</p>
-                            <p className='smallText-red'>Use MENSEOSS coupon to get 10% off on cart value 1999/- and above.</p>
+                            <p className='smallText-red'>Use TATACLIQDISCOUNT coupon to get 10% Discount and above.</p>
                             <p className='smallText-red'>Share your opinion</p>
                         </div>
                         <div className="size-chart-div">
@@ -103,7 +158,7 @@ const SingleProduct = () => {
                         <div id="shiping">
                             <p className='ship-title'>Ship To</p>
                             <div id="pin-code">
-                                <p>Delhi, 110001 </p>
+                                <p>Vashi, 400000 </p>
                                 <p className='colorItRed'>Change Pincode</p>
                             </div>
                             <br />
@@ -203,11 +258,11 @@ const SingleProduct = () => {
                                 <div id="inside-pink-box">
                                     <div id="inside-pink-box-title-n-logo">
                                         <div id="from-Brand-img-hold">
-                                            <img src="https://assets.tatacliq.com/medias/sys_master/images/31345385275422.png" />
+                                            
                                         </div>
-                                        <p className='boldIt'>Puma</p>
+                                        <p className='boldIt'>{singleItem?.name}</p>
                                     </div>
-                                    <p>Comfort and style are synonymous with Puma, making it one of the leading brands of apparel and sports shoes in the world. You can take your pick from the Puma apparels, footwear and accessories collection available here on Tata Cliq.</p>
+                                    <p>Comfort and style are synonymous with {singleItem?.name}, making it one of the leading brands of apparel and sports shoes in the world. You can take your pick from the Puma apparels, footwear and accessories collection available here on Tata Cliq.</p>
                                     <button id="visit-store">visit store</button>
                                 </div>
                             </div>
@@ -220,10 +275,10 @@ const SingleProduct = () => {
                                 <img src="https://www.tatacliq.com/src/general/components/img/WL1.svg" />
                             </div>
                             <button id="buy-now-div">Buy Now</button>
-                            <button id="add-to-bag-div">Add To Bag</button>
+                            <button id="add-to-bag-div" onClick={addtocart}>Add To Bag</button>
                         </div>
                     </div>
-                </div>
+                </div>}
             </div>
             <div id="style-with">
                 <div id="style-with-align">
